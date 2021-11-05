@@ -68,6 +68,7 @@ module Awscr
 
           request.query_params.add("AWSAccessKeyId", @credentials.key)
           request.query_params.add("Signature", signature.to_s)
+          request.query_params.add("Expires", expires.to_s)
         end
       end
     end
